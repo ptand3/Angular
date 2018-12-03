@@ -1,0 +1,13 @@
+<!-- ngIF directive tells the angular that if only the selectedHero exists then only the details would be displayed
+iT binds to the component hero property of typed hero -->
+<div *ngIf="hero"> 
+
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+</div>
+<button (click)="goBack()">Go Back to Dashboard </button>

@@ -1,0 +1,14 @@
+<!-- <p>
+  messages works!
+</p> -->
+<!-- 
+  The *ngIf only displays the messages area if there are messages to show. -->
+<div *ngIf="messageService.messages.length">  
+
+  <h2>MESSAGES</h2>
+  <!-- An Angular event binding binds the button's click event to MessageService.clear(). -->
+  <button class="clear" (click)="messageService.clear()">clear</button>
+  <!-- An *ngFor presents the list of messages in repeated <div> elements. iterates for each message in the messages array -->
+  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+
+</div>
